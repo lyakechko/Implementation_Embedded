@@ -10,8 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>basic</module>
-        <module>util</module>
-    </modules>
+        </modules>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-checkstyle-plugin -->
@@ -33,11 +32,11 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-            <version>8.0.13</version>
+            <version>8.0.25</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
         <dependency>

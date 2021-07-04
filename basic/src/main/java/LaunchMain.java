@@ -26,6 +26,6 @@ public class LaunchMain {
         entityManager.getTransaction().begin();
         entityManager.persist(homeTask);
         entityManager.getTransaction().commit();
-        entityManager.close();
+       // entityManager.close();
     }
 }
