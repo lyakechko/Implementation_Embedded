@@ -9,7 +9,7 @@ import javax.persistence.*;
 
 @NoArgsConstructor
 @MappedSuperclass
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Task {
 
     @Id
