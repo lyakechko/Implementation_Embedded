@@ -10,12 +10,12 @@ import java.util.Locale;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@DiscriminatorValue("W")
 @Entity
 @Table
+@PrimaryKeyJoinColumn (name = "TASK_ID")
 public class WorkTask extends Task {
     @Column(name = "cost")
-    private Locale cost;
+    private Double cost;
 
 
 }

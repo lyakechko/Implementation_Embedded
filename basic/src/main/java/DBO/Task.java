@@ -7,13 +7,9 @@ import lombok.ToString;
 
 import javax.persistence.*;
 
-@Data
-@ToString
 @NoArgsConstructor
 @MappedSuperclass
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "TASK_TYPE", discriminatorType = DiscriminatorType.CHAR)
-@DiscriminatorValue("T")
 public class Task {
 
     @Id
@@ -24,4 +20,28 @@ public class Task {
     private String name;
     @Column(name = "description")
     private String description;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
