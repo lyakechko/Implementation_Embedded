@@ -16,7 +16,7 @@ import java.util.Date;
 @DynamicInsert
 @DynamicUpdate
 @Entity
-@Table
+@Table (name = "HomeTask")
 public class HomeTask extends Task {
 
     @Temporal(TemporalType.DATE)

@@ -7,14 +7,18 @@ import lombok.ToString;
 
 import javax.persistence.*;
 
+
+
+
+
 @Data
 @ToString
 @NoArgsConstructor
-@MappedSuperclass
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "TASK_TYPE", discriminatorType = DiscriminatorType.CHAR)
 @DiscriminatorValue("T")
-public class Task {
+@MappedSuperclass
+public abstract class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "my_seq")

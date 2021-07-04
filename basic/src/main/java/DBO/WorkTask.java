@@ -12,10 +12,10 @@ import java.util.Locale;
 @AllArgsConstructor
 @DiscriminatorValue("W")
 @Entity
-@Table
+@Table (name = "WorkTask")
 public class WorkTask extends Task {
     @Column(name = "cost")
-    private Locale cost;
+    private Double cost;
 
 
 }

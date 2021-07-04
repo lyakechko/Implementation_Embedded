@@ -7,9 +7,8 @@
 
     <persistence-unit name="item-manager-pu" transaction-type="RESOURCE_LOCAL">
         <class>DBO.WorkTask</class>
-        <class>DBO.Address</class>
         <class>DBO.HomeTask</class>
-        <class>DBO.Task</class>
+<!--        <class>DBO.Task</class>-->
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.url"
@@ -19,7 +18,7 @@
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
             <property name="hibernate.show_sql" value="true"/>
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
+<!--            <property name="hibernate.hbm2ddl.auto" value="create"/>-->
         </properties>
     </persistence-unit>
 </persistence>
