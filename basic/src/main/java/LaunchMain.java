@@ -5,6 +5,7 @@ import HibernateUtil.HibernateEntityManager;
 
 import javax.persistence.EntityManager;
 import java.util.Date;
+import java.util.List;
 
 public class LaunchMain {
     public static void main(String[] args) {
@@ -26,6 +27,17 @@ public class LaunchMain {
         entityManager.getTransaction().begin();
         entityManager.persist(homeTask);
         entityManager.getTransaction().commit();
-       // entityManager.close();
+        listTask();
+
+    }
+
+    public static void listTask() {
+        EntityManager entityManager = HibernateEntityManager.getEntityManager();
+        entityManager.getTransaction().begin();
+        List<Task> taskList = entityManager.createQuery("from Task", Task.class).getResultList();
+        for (Task task : taskList) {
+            System.out.println(task);
+        }
+
     }
 }
