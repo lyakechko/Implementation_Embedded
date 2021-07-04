@@ -18,10 +18,10 @@ public class LaunchMain {
         homeTask.setAddress(address);
         homeTask.setStartDate(new Date());
         homeTask.setEndDate(new Date());
-        homeTask.setName("Илья111");
-        homeTask.setDescription("Вопросы по работе1111");
-        address.setCity("Нью-йорк111");
-        address.setStreet("Ленина1111");
+        homeTask.setName("Илья");
+        homeTask.setDescription("Вопросы по работе");
+        address.setCity("Нью-йорк");
+        address.setStreet("Ленина");
 
         WorkTask workTask= new WorkTask();
         workTask.setCost(2.57);
